@@ -1,0 +1,7 @@
+[user]
+	email = milanpaul212@outlook.com
+	name = milanpal
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
