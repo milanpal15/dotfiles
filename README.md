@@ -1,20 +1,18 @@
 # prerequests 
-kitty
-zsh 
-starship
-stow
-fdf
-zoxide
+kitty (terminal)
+zsh (shell)
+stow (config file manager)
+fzf (fuzzy finder)
+zoxide (command history manager)
 
 # setup
 ## cloning repo
-clone this repo in home dir and use command stow . file hirearchy needs to be preserved 
-if error occurs use --adopt flag
-## starship promp customization 
-to change starship prompt theme use following command starship preset themename -o ~/dotfiles/.config/starship.toml
-direct file can also be downloaded
+clone this repo in any dir and use command "stow ." file hirearchy needs to be preserved 
+if error occurs use " --adopt" flag
+
 ## kitty 
 kitty can be configured in .config/kitty/kitty.config
 kitty-themes containes repo for kitty configs repo
+use "kitten themes"  
 themes containes 
 
