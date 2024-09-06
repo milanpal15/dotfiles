@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/home/user/.config/sway'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/user/.vim'
+let g:netrw_dirhist_2='/usr/share/sway/config.d'
+let g:netrw_dirhist_1='/usr/share/sway'
+let g:netrw_dirhist_0='/home/user/.config/kitty/kitty.d'
+let g:netrw_dirhist_9='/home/user/.config/kitty/kitty.d/some.conf'
+let g:netrw_dirhist_8='/home/user/.config'
+let g:netrw_dirhist_7='/home/user/.config/waybar'
+let g:netrw_dirhist_6='/etc/sway'
+let g:netrw_dirhist_5='/home/my/dotfiles'
+let g:netrw_dirhist_4='/home/my/dotfiles/.config'

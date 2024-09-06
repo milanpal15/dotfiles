@@ -1,0 +1,84 @@
+
+#: fonts {{{
+
+font_family      JetBrains Mono Medium
+bold_font        JetBrains Mono Bold
+italic_font      JetBrains Mono Italic
+bold_italic_font JetBrains Mono Bold Italic
+
+font_size 14.0
+# adjust_line_height 100%
+# adjust_column_width 0
+
+#: }}}
+
+#: cursor {{{
+
+cursor #FCA694
+#: cursor_text_color white
+
+#:values beam block underline
+
+cursor_shape block
+ 
+#: cursor_blink_interval -1
+#: cursor_stop_blinking_after 15.0
+
+#: }}}
+
+#:scrollback {{{
+
+#: scrollback_lines 1000
+#: wheel_scroll_multiplier 5.0
+#: touch_scroll_multiplier 1.0
+
+#: }}}
+
+#: mouse {{{
+
+# mouse_hide_wait 0.0
+url_color #0087bd
+url_style curly
+
+open_url_with default
+#: copy_on_select no
+
+#: strip_trailing_spaces never
+rectangle_select_modifiers ctrl+alt
+
+focus_follows_mouse no
+
+#: terminal grabs the mouse. Valid values are: arrow, beam and hand
+pointer_shape_when_grabbed hand
+
+#: terminal_select_modifiers shift
+
+#: copy_on_select no
+
+#: copy to a private buffer of kitty and paste from there 
+#:     map cmd+shift+v paste_from_buffer a1
+
+#: click_interval -1.0
+
+#: }}}
+
+
+#: Performance tuning {{{
+#:this setting should not be set as it costs performance 
+#: repaint_delay 10
+#: input_delay 3
+
+sync_to_monitor no
+
+#: }}}
+
+#: bell settings {{{
+
+enable_audio_bell no
+#: visual_bell_duration 0.0
+#: window_alert_on_bell yes
+#: command_on_bell none
+
+#:}}}
+
+#: 

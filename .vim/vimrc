@@ -1,0 +1,971 @@
+source ~/.vim/config/keymappings.vim
+"
+"basic settings {{{
+"vi compatibility not advisable
+set nocp
+
+"insert mode  as default
+set noim
+
+"paste mode 
+"set nopaste
+
+"key sequence to toggle paste mode
+"set pt=
+
+"set runtimepath
+"set rtp=path,path2
+"
+"list of dirs for plugin packages
+"set pp=path,path
+
+"help file path
+"set hf=path
+
+"wrapping lines command
+"set ww=b,s
+"
+"jump command move to first char of line 
+"set sol nosol
+"
+"don't know how it works but has something to do with paras
+"set para=
+"
+"list of directory names used for file searching
+"path=
+"
+"ignore specific subdirs
+set wildignore+=**/node_modules/**
+"cdhome commadn behavious
+"set nocdh cdh
+"
+"list of directory names used for cd
+"set cd=,,
+"
+"change dir to file dir in buffer
+"set noacd acd
+"
+"change pwd of shell in buffer
+"set ws nows
+"
+"incsearch is option which searches as you type
+"set nois is
+"
+"change how backslashes are used in search (nice option need to see how it
+"works)
+set magic "nomagic
+"
+"select reg exp engine
+"set re=0
+"
+"ignore case when searching 
+"set noic ic
+"
+"smartcase is better option as applies ignore case only when no case is
+"applied or all chars are small
+set scs "noscs
+"
+"case a what method to use  to change case of letters
+"set cmp=internal,keepascii
+"
+"maximum amount of memory used for pattern matching 
+"set mmp=1000
+"
+"define pattern for macro defination line 
+"set def=
+"don't know how it works
+"
+"include pattern for include file need to see how it works 
+"set inc=
+"
+"expression used to transform include line to a file name
+"set inex=
+"
+"use binary searching in tags files 
+"set tbs notbs 
+"
+"number of significant chars in tag name
+"set tl=0
+"
+"list of file names to search for tags
+"set tag=./tags,tags
+"
+"how to handle case when searching in tag files
+set tc=followic
+
+"file names in a tags file are relative to the tags file 
+" set tr notr
+"
+" tag command will use tagstack
+" set tgst notgst
+"
+" when completing tags in insert mode show more info
+set nosft "sft
+"function to be used to perform tag searching 
+" set tfu=
+"
+" command to execute cscope 
+" set csprg=cscope
+" using cscope for tag commands
+" set cst nocst
+" the order in which cscope performs search
+" set csto=0 or 1
+" give messages when adding a cscope database
+" set nocsverb csverb
+" how many components of the path to show 
+" set cspc=0
+" when to open quickfix window for cscope
+" set csqf=
+" cscope file names are relative to file 
+" set nocsre csre
+" }}}
+"
+" displaying text {{{
+" number of lines to scroll for cntrl-u and d
+set scr=8
+
+"scroll by screen line 
+"set nosms sms
+set sms
+
+"number of lines to show around cursor
+set so=3
+
+"wrap long lines 
+"set wrap nowrap
+"
+"linebreak wrap long lines at a char in breakat
+"set nolbr lbr
+set lbr
+
+"preserve indentation in wrapped text
+set bri
+
+"set briopt=
+"
+"which chars might cause a line break
+"set brk=\ \         !@*;:,./?
+"
+"string to put before wrapped screen lines
+"set sbr=
+
+"minimal number of columns to scroll horizontally
+"minimal number of columns to kepp left and right 
+set siso=4
+
+"number of lines used  for command line 
+set ch=1
+
+"don't redraw while redrawing 
+set lz "nolz
+
+"redrawtime timeout for hlsearch and :match highlighting in msec
+"set rdt=2000
+
+"write delay delay in msec for each char to written to display
+"set wd=1
+
+"show tab as ^I and end of line as $
+"set list
+"list of strings used for list mode
+set lcs=eol:-
+
+"show line number for each line
+set nu
+
+"show relative number 
+set rnu
+
+"number  of coulumns to se for line number
+set nuw=5
+
+"control whether concealable text is hidden
+"set cole=0
+
+"modes in which text in the cursor line can be concealed
+"set cocu=
+"
+"}}}
+"
+"syntax, highlighting and spelling{{{
+"background color brightness
+"set bg=dark
+set bg=light
+
+"set file type triggers filetype event when set
+"set ft=
+"
+"syntax name of syntax highlighting used
+"set syn=
+"
+"maximum column to look for syntax highlight
+"set smc=3000
+"
+"which highlight to use for various occasions
+" set hl=8:SpecialKey,~:EndOfBuffer,@:NonText,d:Directory,e:ErrorMsg,i:IncSearch,l:Search,y:CurSearch,m:MoreMsg,M:ModeMsg,n:LineNr,a:LineNrAbove,b:LineNrBelow,N:CursorLineNr,G:CursorLineSign,O:CursorLineFold,r:Question,s:StatusLine,S:StatusLineNC,c:VertSplit,t:Title,v:Visual,V:VisualNOS,w:WarningMsg,W:WildMenu,f:Folded,F:FoldColumn,A:DiffAdd,C:DiffChange,D:DiffDelete,T:DiffText,>:SignColumn,-:Conceal,B:SpellBad,P:SpellCap,R:SpellRare,L:SpellLocal,+:Pmenu,=:PmenuSel,[:PmenuKind,]:PmenuKindSel,{:PmenuExtra,}:PmenuExtraSel,x:PmenuSbar,X:PmenuThumb,*:TabLine,#:TabLineSel,_:TabLineFill,!:CursorColumn,.:CursorLine,o:ColorColumn,q:QuickFixLine,z:StatusLineTerm,Z:StatusLineTermNC
+"
+"hlsearch	highlight all matches for the last used search pattern
+"set hls nohls
+"
+"highlight group to use for window
+"set wcr=
+"
+"highlight screen column of the cursor
+"set nocuc cuc
+"
+"highlight cursor line o the screen 
+"set cul nocul
+"
+"list all accepted languages
+"set spl=en
+"
+"spellfile or file to which zg adds good words to
+"set spf=
+"
+"spellcapcheck pattern to locate the end of sentence
+"set spc=
+"
+"spelloptions flags to change how spell checking works
+"set spo=
+"
+"methods used for  suggest corrections
+"set sps=best
+"
+"amount of memory used by :mkspell before compressing
+"set msm=460000,2000,500
+"}}}
+"
+"multiple windows{{{
+"showing status line 0 for not 1 or 2 for showing for last window
+set ls=2
+"
+"alternate format to be used for status line 
+"set stl=
+"
+"make all windows the same size when adding or removing windows
+"set ea noea
+"
+"in which dir always eqaual works vertically or horizontally or both
+"set ead=both or ver or hor
+"
+"minimum  number of lines used for current window
+"set wh=1
+"minimum number of lines used for any window
+"set wmh=1
+"keep the height of the window
+"set nowfh wfh
+"keep the width of the window
+"set nowfw wfw
+"minimal number of columns used for current window
+"set wiw=20
+"minimal number of columns used for any window 
+"set wmw=1
+"help height initial height of the help window
+set hh=20
+
+"}}}
+"
+"preview popup settings{{{
+"previewpopup use a popup window for preview
+"set pvp=
+"previewheight default height for the preview window
+"set pvh=12
+"previewwindow identifies the preview window
+"set nopvw pvw
+set pvw
+"}}}
+""
+"buffer{{{
+"
+"hidden don't unload a buffer  when no longer shown in a window
+"set nohid hid
+"switchbuf useopen and or split which window to use when jumping to a
+"buffer
+"set swb=
+"}}}
+"
+"window split settings {{{
+"a new window is put below the current one
+"set nosb sb
+"splitkeep determines scroll behavior for split window
+"set spk=cursor
+"split right a new window is  put right of the current one
+"set nospr spr
+"scrollbind this window scrolls together with other bound windows
+"set noscb scb
+set scb
+"scroll opt ver,hor,jump list options for scrollbind
+"set sbo=ver,jump
+"cursorbind this windows cursor moves together with other bound windows
+"set nocrb crb
+"}}}
+"
+"terminal config {{{
+"
+"set tws=6 "returning invalid
+"termwinkey key that precedes vim commands in a terminal window
+"set twk=
+"max numeber of lines to keep for scroll back or terminal history
+"set twsl=10000
+"termwintype type of pty to use for a terminal window
+"set twt=
+"winptydll=winpty64.dll "windows settings
+"}}}
+
+"multiple tab pages{{{
+"showtabline 0,1 or 2
+"set stal=1
+"tabpagemax maximum number of tab pages to open for -p and tab all
+set tpm=8
+"tabline custom tab lable for gui
+"set gtl=
+"custom tab page tooltip for the gui
+"set gtt=
+"}}}
+"
+"terminal config {{{
+"name of the terminal used
+"set term=bash
+"alias for term
+"set tty=bash
+"check builtin termcaps first
+"set tbi notbi
+"ttyfast terminal connection is fast
+"set tf notf
+"xtermcodes request terminal key codes when xterm is detected
+"set xtermcodes noxtermcodes
+set xtermcodes
+"weirdinvert terminal that requires extra redrawing
+"set nowiv wiv
+"what keyboard protocol to use for which teminal
+"set kpc=kitty:kitty,foot:kitty,wezterm:kitty,xterm:mok2
+"recognize keys that start with esc in insert mode
+"set ek noek
+"scroll jump minimal number of lines to scrollat a time
+"set sj=1
+"ttyscroll maximum number of lines to use scrolling instead of redrawing
+"set tsl=999
+"guicursor specifies what the cursor looks like in different modes
+"set gcr=n-v-c:block-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+"}}}
+"
+"title settings {{{
+"show info in the window title
+"set title notitle
+"precentage of columns used for window title
+"set titlelen=85
+"title when not empty string to be used for the window title
+"set titlestring=
+"titleold string to restore the title to when exiting vim
+"set titlelold=Thaks\ for\ flying\ Vim
+"set text ofthe icon for this window
+"set icon noicon
+"when not empty text for the icon of this window
+"set iconstring=
+"
+"restorescreen restore the screen contents when exiting vim
+"set rs nors
+"}}}
+"
+"mouse config {{{
+"enable mouse or list of flags for using mouse
+set mouse=a
+"the window with mouse focus becomes current one
+"set nomousef mousef
+"scrollfocus the window with the mouse pointer scrolls with the mouse wheel
+"set noscf scf
+"mousehide hide the mouse pointer while typing 
+set mh "nomh
+"mousemoveevent report mouse movement events
+"set nomousemev mousemev
+"mousemodel "extend", "popup" or"popup_setpos"
+"what the right mouse button used for
+"set mousem=popup
+"mousetime maximum timein msec to recognze a double click
+set mouset=1
+"ttymouse "xterm","xterm2","sgr" etc; type of mouse
+"set ttym=
+"
+"mouseshape what the mouse pointer looks like in different modes
+"set mouses=i-r:beam,s:updown,sd:udsizing,vs:leftright,vd:lrsizing,m:no,ml:up-arrow,v:rightup-arrow
+"}}}
+"
+"gui {{{
+"guifont list of font naesto be used in the gui
+"set gfn=
+"guifontwide list of fontnamees to be used for double wide characters
+"set gfw=
+"guioptions list of flags that specify how the gui works
+"set go=egmrLtT
+"renderoptions options for  text rendering
+"set rop=
+"guipty use a pseudo-tty for I/O to external commands
+"set guipty noguipty
+"browsedir "last","buffer" or "current" which dir to be used for file  browser
+"set bsdir=last
+"langmenu language to used for the menus
+"set langmenu=
+"menuitems maximum number of items in one menu
+"set mis=25
+"winaltkeys "no","yes", or "menu" how to sue the alt key
+"set wak=menu
+"linespace number of pixel lines to use between characters
+"set lsp=1
+"balloonelay delay in ms  before a ballon may pop
+"set bdlay=600
+"bllooneval use balloon eval in gui
+"set nobeval beval
+"expression to show in balloon eval 
+"set bexpr=
+"}}}
+"
+"printing options {{{
+"list of iems that control format of :hardcopy output
+"set popt=
+"nae of the printer to used for hardcopy
+"set pdev=
+"name of font to be used for print
+"set pfn=Courier_New:h10
+"printheader format of the header used for hardcopu
+"set pheader=
+"the cjk chars set to used for cjk output
+"set  pmbcs=
+"printmbfont list of font names to used for cjk
+"set pmbfn=
+"}}}
+"
+"messages and info {{{
+"terse add 's' flag in shortmess don't show search messages
+"set noterse terse
+"
+"shortmess list of flags to make messages shorter
+"set shm=filnxtToOS
+"
+"showcmd show partial command keys in location given by showcmdloc
+"set sc nosc
+"
+"showcmdloc location where to show partial command keysfor showcmd
+"set sloc=last
+"showmode display the current mode in the status line
+"set smd nosmd
+set smd
+"ruler show cursor position below each window
+"set noru ru
+set ru
+"rulerformat alternate format to be used  for ruler
+"set ruf=
+"report threshold for reporting number for changed lines
+"set report=2
+"verbose threshold for reporting number of changed lines 
+"set vbs=0
+"verbosefile file to write messages in
+"set vfile=
+"more pause listings when the screen is full
+"set more nomore
+"confirm start a dialogue when a command fails
+"set nocf cf
+
+"bell settings {{{
+"error bells ring the bell for error messages
+"set noeb eb
+"visualbell use a visual bell instead of beeping
+"set novb vb
+"belloff donot ring the bell for these reasons
+"set belloff=
+"
+"}}}
+"
+"helplang list of pref langs for finding help
+set hlg=En
+"
+"}}}
+"
+"selecting text {{{
+"selection old, inclusive or exclusive how selecting text behaves
+"set sel=inclusive
+"selectmode mouse,key and or cmd when to start select mode instead of visual
+"mode
+"set slm-
+"clipboard unnamed to use the * register like unnamed register
+"autoselect to always put selected text on the clipboard
+"set cb=
+"keymodel startsel and or stopsel what special keys can do
+"set km=
+"}}}
+"
+"editing text {{{
+"undolevels maximum number of changes that can be undone
+"set ul=1000
+"undofile automatically save and restore undo history
+"set noudf udf
+"undodir list of directories for undo files
+"set udir=.
+"undorelod maximum number lines to save for undo on a buffer reload
+"set ur=10000
+"modified changes have been made and not written to a file
+"set nomod mod
+"readonly buffer is not be written
+"set noro ro
+"modifiable changes to the text are possible
+"set ma noma
+"textwidth line length above which to break a line
+"set tw=0
+"wrapmargin margin from the right  in which to break a line
+"set wm=0
+"backspace specifies what <BS> CTRL-W etc can do in insert mode
+"set bs=
+"comments definition of what comment lines look like
+"	(local to buffer)
+" 	set com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+"formatoptions	list of flags that tell how automatic formatting works
+"	(local to buffer)
+" 	set fo=tcq
+"formatlistpat	pattern to recognize a numbered list
+"	(local to buffer)
+" 	set flp=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+"formatexpr	expression used for "gq" to format lines
+"	(local to buffer)
+" 	set fex=
+"complete	specifies how Insert mode completion works for CTRL-N and CTRL-P
+"	(local to buffer)
+	set cpt=.,w,b,u,t,i
+
+"completeopt whether to use popup menu for insert mode completion
+set cot=menu,preview
+"completepopup options for the insert mode completion info popup
+"set cpp=
+"pumheight maximum height of the popup  menu
+"set ph=0
+"pumwidth minimum width of the popup menu
+"set pw=15
+"completefunc user defined function for the Insert mode completion 
+"set cfu=
+"omnifunc function for filetype specific insert mode completion
+"set ofu=
+"dictionary list of dictionary files for keyword completion
+"set dict=
+"thesaurus list of thesaurus files for keyword completion
+"set tsr=
+"thesaurusfunc function used for thesaurus completion
+"set tsrfu=
+"infercase adjust case of a keyword completion match
+"set noinf inf
+"digraph enable entering digraphs with c1 <BS> c2
+"set nodg dg
+"tildeop the "~" command behaves like an operator
+"set notop top
+"operator func function called for the g@ operator 
+"set opfunc=
+"show match ehrn inserting a bracket, briefly jump to its match
+"set nosm sm
+"matchtime tenth of a second to show a match for showmatch
+"set mat=5
+"matchpairs list of pairs that match for the % command
+set mps=(:),{:},[:]
+"joinspaces use two spaces after '.' when joining a line
+set js "nojs
+"nrformats alpha octal hex bin and or unsigned number formats recognized for
+"ctrl-a and ctrl-x commands
+"set nf=bin,octal,hex
+"}}}
+"
+"tabs and indenting {{{
+"tabstop number of spaces a tab in the text stands for 
+set ts=4
+"shiftwidth number of spaces used for each step of indent 
+"set sw=4
+"list of number of spaces a tab counts for vartabstop
+"set vts=
+"varsoftabstop list of number of spaces a soft tabsstop counts for
+"set vsts=
+"smarttab a tab in an indent inserts shiftwidth spaces
+"set nosta sta
+set sta
+"softtabstop if non-zero, number of spaces to insert for a tab
+"set sts=0
+"shiftround round to 'shiftwidth' for '<<' and '>>' 
+"set nosr sr
+"expandtab expand tabto spaces in insert mode
+"set noet et
+"autoindent automatically set the indent of a new line
+"set noai ai
+set ai
+"smartindent do clever autoindenting
+set si "nosi
+"
+"
+"C language options {{{
+"cindent enable specific indenting for c code
+"set nocin cin
+"cinoptions options for c indenting
+"set cino=
+"cinkeys keys that trigger c indenting in insert mode
+"set cink=0{,0},0),0],:0#,!^F,o,O,e
+"cinwords list of words that cause more c indent 
+"set cinw=if,else,while,do,for,switch
+"cinscopedecls list of sccope declaration names used by cino-g
+"set cinsd=public,protected,private
+"indentexpr expression used to obtainthe indent of a line
+"set inde=
+"
+"}}}
+"
+"indent keys keys that trigger indenting with indentexpr in Insert
+"mode
+"set indk=0{,0},0),0],:,0#,!^F,o,O,e
+"copyindent copy whitespaces for indenting from previous line
+"set noci ci
+"preserveindent preserve kind of whitespace when changing indent 
+"set nopi pi
+"lisp enable lisp mode
+"set nolisp lisp
+"
+"lispwords words that change how lisp indenting works
+"set lw=defun,define,defmacro,set!,lambda,if,case,let,flet,let*,letrec,do,do*,define-syntax,let-syntax,letrec-syntax,destructuring-bind,defpackage,defparameter,defstruct,deftype,defvar,do-all-symbols,do-external-symbols,do-symbols,dolist,dotimes,ecase,etypecase,eval-when,labels,macrolet,multiple-value-bind,multiple-value-call,multiple-value-prog1,multiple-value-setq,prog1,progv,typecase,unless,unwind-protect,when,with-input-from-string,with-open-file,with-open-stream,with-output-to-string,with-package-iterator,define-condition,handler-bind,handler-case,restart-bind,restart-case,with-simple-restart,store-value,use-value,muffle-warning,abort,continue,with-slots,with-slots*,with-accessors,with-accessors*,defclass,defmethod,print-unreadable-object
+""lispiotions for Lisp indenting
+"set lop=
+"}}}
+"
+"folding options {{{
+"foldenable uset to display all folds open
+"set fen nofen
+"foldlevel folds witha  level higher then this number will be closed
+"set fdl=0
+set fdl=0
+"foldlevelstart value for foldlevel when startin to edit a file 
+"set fdls=-1
+"foldcolumn width of the column used to indicate folds 
+set  fdc=1
+"foldtext expression used to display the text of  a closed fold
+set fdt=foldtext()
+"foldclose set to all to close a fold when the cursor leaves it 
+"set fcl=
+"foldopen specifies for which commands a fold will be opened
+set fdo=block,hor,mark,percent,quickfix,search,tag,undo
+"foldminlines minimum number of screen lines for a fold to be closed
+"set fml=1
+"commentstring template for comments; used to put  the marker in
+"set cmd=/*%s*/ ""returned unknown option error
+"foldmethod folding type: manual, indent, expr, marker
+"syntax or  diff
+set fdm=marker
+"foldexpr expression used when foldmethod s expr
+"set fde=0
+"foldignore used to ignore lines when foldmethod is indent
+"set fdi=#
+"foldmarker marker used when foldmethod is marker
+set fmr={{{,}}}
+"foldnestmax maximum fold depth for when foldmethod is indent or syntax
+"set fdn=20
+"
+"}}}
+"
+"diff mode {{{
+"set nodiff diff
+"set dip=internal,filler,closeoff
+"diffexpr expression used to obtain diff file
+"set dex=
+"patchexpr expression used to patch a file
+"set pex=
+"
+"}}}
+"
+"mapping {{{
+"maxmapdepth maximum depth of mapping 
+"set mmd=1000
+"remap recognize mappings in mapped keys
+"set remap noremap
+"timeout allow timing out halfway into a  mapping
+"set to noto
+"ttimeout allow timing out halfway into a keycode
+"set nottimeout ttimeout
+"timeoutlen time in msec for timeout
+"set tm=1000
+"ttimeoutlen time in msec for ttimeout
+"set ttm=-1
+"}}}
+"
+"reading and writing file {{{
+"modeline enablel using settings from modelines when reading a file
+"set ml noml
+"modelineexpr allow setting expression options from a modeline
+"set nomle mle
+"modelines number of lines to check for modelines 
+"set mls=5
+"binary binary file editing
+"set nobin bin
+"endofline last linein file has end of line
+"set eol noeol
+"endoffile last line in file followed by ctrl-z
+"set noeof eof
+"fixedendofline fixes missing endofline at end of text file
+"set fixeol nofixeol
+"bomb prepend a byte order mark to the file
+"set nobomb bomb
+"fileformat end of line format ods, unix, mac
+"set ff=unix
+"fileformats list of  file formats to look for when editing a file
+"set ffs=dos,unix
+"textmode obsolete, use fileformat
+"set tx notx
+"textauto obsolete use fileformats
+"set ta nota
+"write writing files is allowed
+"set write nowrite
+"writenbackup write a backup file before overwriting a file
+"set wb nowb
+"backup keep a backup after overwriting a file 
+"set nobk bk
+"backupskip patterns that specify for which fiels a backup is not made
+"set bsk=/node_modules/**
+"backupcopy whether to make a backup as a copy to rename the existing
+"file
+"set bkc=auto
+"backupdir list of directories to put backup file in
+"set bdir=~/.local/backup
+"backuptext file name extension for the backup file 
+"set bex=~
+"autowrite automatically write a file when leaving a modified buffer
+"set noaw aw
+"autowriteall as autowrite but works with more commands
+"set noawa awa
+"writeany always write without asking for confirmation 
+"set nowa wa
+"autoread automatically read a file when it was modified outside of vim
+"set noar ar
+"patchmode keep oldest version of a file; specifies file name extension
+set pm=
+"fsync forcibly sync the file to disk after writing it 
+"set nofs fs
+"shortname use 8.3 file names
+"set nosn sn
+"cryptmethod encryption method for file writing: zip, blowfish or blowfish2
+"set cm=blowfish2
+"
+"}}}
+"
+"swap file config {{{
+"directory list of directories for swap file
+"set dir=.,
+"swapfile  use a swap file for this buffer
+"set swf noswf
+"swapsync sync,fsync or empty how to flush swap file to disk
+"set sws=fsync
+"updatecount number of characters typed to cause a swap file update
+"set uc=200
+"updatetime time in msec after which swapfile willl be updated 
+"set ut=4000
+"maxmem maximum amount of memomry in kb used for one buffer
+"set mm=2664510
+"
+"}}}
+"
+"command line editing {{{
+"history how many command lines are remembered
+"set hi=50
+"wildchar key that triggers command-line expansion
+"set wc=9
+"wildcharm like wildchar but can also be used in mapping 
+"set wcm=0
+"wildmode specifies how command line completion works
+"set wim=full
+"suffixis list of file name extensions that have a lower priority
+"set su=.bak,~,.o,.h,.info,.swp,.obj
+"suffixesadd list of file name extensions added when searching for a file
+set sua+=.js,.tsx,.jsx,.ts
+"wildignore list of patterns to ignore files for file name completion 
+"set wig=
+"fileignorecase ignore case when using filenames
+set fic "nofic
+"wildignorecase ignore case when completing file names
+"set nowic wic
+set wic
+"wildmenu commandline completion shows a list of matches
+set wmnu "nowmnu
+"cedit key used to open the command line window
+set cedit=^a
+"cmdwinheight height of the commandline window
+set cwh=4
+"
+"}}}
+"
+"executing external commands {{{
+"shell name of the shell program used for external commands
+"set sh=/bin/bash
+"shellquote characters to enclose a shell command in 
+"set shq=
+"shellxquote like shellquote but  include the redirection
+"set sxq=
+"shellxescape characters to escape when shellxquote is 
+"set sxe=\"&\|<>()@^
+"shellcmdflag argument for shell to execute a command
+"set shcf=/c
+"shellredir used to redirect command output to a file
+"set srr=>%s\ 2>&1
+"shelltemp use a temp file for shell commands instead of using a pipe
+"set stmp nostmp
+"equalprg program use for = command
+"set ep=
+"formatprg program used to format lines with gq command
+"set fp=
+"keywordprg program used for the k command
+"set kp=:help
+"warn warn when using a shell command and a buffer has changes
+"set warn nowarn
+"errorfile name of the file that contains error messages
+"set ef=errors.er
+"errorformat list of formats for error messages
+"set efm=%f(%l):\ %t%*\\D%n:\ %m,%f(%l\\,%c):\ %t%*\\D%n:\ %m,%f(%l)\ \\=:\ %t%*\\D%n:\ %m,%*[^\"]\"%f\"%*\\D%l:\ %m,%f(%l)\ \\=:\ %m,%*[^\ ]\ %f\ %l:\ %m,%f:%l:%c:%m,%f(%l):%m,%f:%l:%m,%f\|%l\|\ %m
+"makeprg program used for the :make command
+"set mp=make
+"shellpipe string used to put the output of :make in the error file
+"set sp=>%s\ 2>&1
+"makeef name of the error file for the makeprg command
+"set mef=
+"grepprg program used for the :grep command
+set gp=rg\ /n
+"grepformat list of formats for output of grepprg
+"set gfm=%f:%l:%m,%f:%l%m,%f\ \ %l%m
+"makeencoding encoding of the :make and :grep output
+"set menc=
+"quickfixtextfunc function to display text in the quickfix window
+"set qftf=
+"
+"}}}
+"
+"system specific {{{
+"shellslash use forward slashes in file names; for unix like shells
+"set nossl ssl
+"completeslash specifies slash/backslash used for completion
+"set csl=
+"
+"}}}
+"
+"language specific {{{
+"isfname specifies the characters in a file name
+"set isf=@,48-57,/,\\,.,-,_,+,,,#,$,%,{,},[,],:@-@,!,~,=
+"insident specifies the characters in an identifier set
+"isi=@,48-57,_,128-167,224-235
+"iskeyword specifies the characters in a keyword
+"set isk=@,48-57,_,192-255
+"isprint specifies  printable characters
+"set isp=@,~-255
+"quoteescape specifies escape characters in a string
+"set qe=\\
+"rightleft display the buffer right to left 
+"set norl rl
+"rightleftcmd when to edit the command line right to left
+"set rlc=search
+"revins insert chars backwards
+"sete nori ri
+"allowrevins allow ctrl-_ in insert and commandline mode to toggle revins
+"set noari ari
+"aleph the ascii code for the first letter of the hebrew alphabet 
+"set al=224
+"hkmap use hebrew keyboard mapping 
+"set nohk hk
+"hkmapp use phonetic hebrew keyboard mapping
+"set nohkp hkp
+"arabic prepare for editing arabic text
+"set noarab arab
+"arabicshape perform shaping of arabic chars
+"set arshape noarshape
+"termbidi terminal will perform bidi handling 
+"set tbidi notbidi
+"keymap name of a keyboard mapping
+"set kmp=
+"langmap list of chars that are translated in normal mode
+"set lmap=
+"langremap apply langmap to mapped chars
+"set lrm nolrm
+"
+"iminsert	in Insert mode: 1: use :lmap; 2: use IM; 0: neither
+""	(local to window)
+" 	set imi=0
+"imstyle	input method style, 0: on-the-spot, 1: over-the-spot
+" 	set imst=0
+"imsearch	entering a search pattern: 1: use :lmap; 2: use IM; 0: neither
+"	(local to window)
+" 	set ims=-1
+"
+"}}}
+"
+"multibyte chars {{{
+""encoding	character encoding used in Vim: "latin1", "utf-8",
+"	"euc-jp", "big5", etc.
+" 	set enc=utf-8
+"fileencoding	character encoding for the current file
+"	(local to buffer)
+" 	set fenc=utf-8
+"fileencodings	automatically detected character encodings
+" 	set fencs=ucs-bom,utf-8,default,latin1
+"termencoding	character encoding used by the terminal
+" 	set tenc=
+"charconvert	expression used for character encoding conversion
+" 	set ccv=
+"delcombine	delete combining (composing) characters on their own
+" 	set nodeco	deco
+"maxcombine	maximum number of combining (composing) characters displayed
+" 	set mco=2
+"ambiwidth	width of ambiguous width characters
+" 	set ambw=single
+"emoji	emoji characters are full width
+ 	set emo	noemo
+"}}}
+
+"various {{{
+"virtualedit	when to use virtual editing: "block", "insert", "all"
+"	and/or "onemore"
+" 	set ve=
+"eventignore	list of autocommand events which are to be ignored
+" 	set ei=
+"loadplugins	load plugin scripts when starting up
+" 	set lpl	nolpl
+set lpl
+"exrc	enable reading .vimrc/.exrc/.gvimrc in the current directory
+" 	set noex	ex
+set ex
+"secure	safer working with script files in the current directory
+" 	set nosecure	secure
+"gdefault	use the 'g' flag for ":substitute"
+" 	set nogd	gd
+"edcompatible	'g' and 'c' flags of ":substitute" toggle
+" 	set noed	ed
+"opendevice	allow reading/writing devices
+" 	set noodev	odev
+"maxfuncdepth	maximum depth of function calls
+" 	set mfd=100
+"sessionoptions	list of words that specifies what to put in a session file
+" 	set ssop=blank,buffers,curdir,folds,help,options,tabpages,winsize,terminal
+"viewoptions	list of words that specifies what to save for :mkview
+" 	set vop=folds,options,cursor,curdir
+"viewdir	directory where to store files with :mkview
+" 	set vdir=C:\\Users\\milan_b2b36tf/vimfiles/view
+"viminfo	list that specifies what to write in the viminfo file
+" 	set vi='100,<50,s10,h,rA:,rB:
+"viminfofile	file name used for the viminfo file
+" 	set vif=
+"bufhidden	what happens with a buffer when it's no longer in a window
+"	(local to buffer)
+" 	set bh=
+"buftype	empty, "nofile", "nowrite", "quickfix", etc.: type of buffer
+"	(local to buffer)
+" 	set bt=
+"buflisted	whether the buffer shows up in the buffer list
+"	(local to buffer)
+" 	set bl	nobl
+"debug	set to "msg" to see all error messages
+" 	set debug=
+"signcolumn	whether to show the signcolumn
+"	(local to window)
+" 	set scl=auto
+"luadll	name of the Lua dynamic library
+" 	set luadll=lua54.dll
+"perldll	name of the Perl dynamic library
+" 	set perldll=perl532.dll
+"pyxversion	whether to use Python 2 or 3
+" 	set pyx=0
+"pythondll	name of the Python 2 dynamic library
+""}}}
+"
+"
