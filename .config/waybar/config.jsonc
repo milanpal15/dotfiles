@@ -22,8 +22,8 @@
         "cpu",
         "memory",
         "temperature",
-        "backlight",
-        "sway/language",
+       // "backlight",
+       // "sway/language",
         "battery",
         "clock",
         "tray"

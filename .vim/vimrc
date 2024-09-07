@@ -1,5 +1,5 @@
 source ~/.vim/config/keymappings.vim
-"
+
 "basic settings {{{
 "vi compatibility not advisable
 set nocp
@@ -7,6 +7,10 @@ set nocp
 "insert mode  as default
 set noim
 
+set viminfo+=
+hi Folded ctermbg=black
+highlight Folded ctermfg=white
+syntax on
 "paste mode 
 "set nopaste
 
@@ -188,6 +192,7 @@ set nuw=5
 "}}}
 "
 "syntax, highlighting and spelling{{{
+syntax on
 "background color brightness
 "set bg=dark
 set bg=light
@@ -772,7 +777,7 @@ set pm=
 "suffixis list of file name extensions that have a lower priority
 "set su=.bak,~,.o,.h,.info,.swp,.obj
 "suffixesadd list of file name extensions added when searching for a file
-set sua+=.js,.tsx,.jsx,.ts
+set sua+=
 "wildignore list of patterns to ignore files for file name completion 
 "set wig=
 "fileignorecase ignore case when using filenames
