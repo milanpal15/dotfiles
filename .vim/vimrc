@@ -1,16 +1,11 @@
-source ~/.vim/config/keymappings.vim
+for config_file in glob('~/.vim/config/*.vim', 1, 1)
+    execute 'source' config_file
+endfor
 
 "basic settings {{{
-"vi compatibility not advisable
-set nocp
-
-"insert mode  as default
-set noim
 
 set viminfo+=
-hi Folded ctermbg=black
-highlight Folded ctermfg=white
-syntax on
+
 "paste mode 
 "set nopaste
 
@@ -28,86 +23,61 @@ syntax on
 
 "wrapping lines command
 "set ww=b,s
-"
-"jump command move to first char of line 
-"set sol nosol
-"
-"don't know how it works but has something to do with paras
-"set para=
-"
-"list of directory names used for file searching
-"path=
-"
+
 "ignore specific subdirs
 set wildignore+=**/node_modules/**
-"cdhome commadn behavious
-"set nocdh cdh
-"
+
 "list of directory names used for cd
 "set cd=,,
-"
+
 "change dir to file dir in buffer
 "set noacd acd
-"
+
 "change pwd of shell in buffer
 "set ws nows
-"
-"incsearch is option which searches as you type
-"set nois is
-"
-"change how backslashes are used in search (nice option need to see how it
-"works)
-set magic "nomagic
-"
+
 "select reg exp engine
 "set re=0
-"
-"ignore case when searching 
-"set noic ic
-"
-"smartcase is better option as applies ignore case only when no case is
-"applied or all chars are small
-set scs "noscs
-"
-"case a what method to use  to change case of letters
+
+"case a what method to use to change case of letters
 "set cmp=internal,keepascii
-"
+
 "maximum amount of memory used for pattern matching 
 "set mmp=1000
-"
+
 "define pattern for macro defination line 
 "set def=
 "don't know how it works
-"
+
 "include pattern for include file need to see how it works 
 "set inc=
-"
+
 "expression used to transform include line to a file name
 "set inex=
-"
+
 "use binary searching in tags files 
 "set tbs notbs 
-"
+
 "number of significant chars in tag name
 "set tl=0
-"
+
 "list of file names to search for tags
 "set tag=./tags,tags
-"
+
 "how to handle case when searching in tag files
 set tc=followic
 
 "file names in a tags file are relative to the tags file 
 " set tr notr
-"
+
 " tag command will use tagstack
 " set tgst notgst
-"
+
 " when completing tags in insert mode show more info
 set nosft "sft
 "function to be used to perform tag searching 
 " set tfu=
-"
+
 " command to execute cscope 
 " set csprg=cscope
 " using cscope for tag commands
@@ -973,4 +943,4 @@ set ex
 "pythondll	name of the Python 2 dynamic library
 ""}}}
 "
-"
+

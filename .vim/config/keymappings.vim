@@ -10,7 +10,15 @@ let mapleader=" "
 
 "remap jj to Escape
 inoremap <silent> jj <Esc> 
-nnoremap <silent> ww :w <CR>
+nnoremap <silent> <Leader>ww :w <CR>
+nnoremap <silent> <Leader>wq :wq <CR>
+nnoremap <silent> <Leader>qq :q <CR>
+
+"buffer mappings
+map <silent> <Leader>bn :bn <CR>
+map <silent> <Leader>bp :bp <CR>
+map <silent> <Leader>bd :bd <CR>
+
 " Nerd tree
 " noremap <Leader>b :NERDTreeToggle<CR>
 
@@ -19,8 +27,10 @@ nmap <silent> <Leader>evs :e ~/.vim/config/settings.vim<CR>
 nmap <silent> <Leader>evk :e ~/.vim/config/keymappings.vim<CR>
 nmap <silent> <Leader>sv :so ~/.vimrc<CR>
 
-nnoremap <silent> <Leader>bn :bn <CR>
 
 " Make horizontal scrolling easier
 " nmap <silent> <C-o> 10zl
 " nmap <silent> <C-i> 10zh
+
+
+
