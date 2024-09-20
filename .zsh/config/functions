@@ -1,0 +1,39 @@
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]]
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+
+  elif [[ ${KEYMAP} == main ]]
+       [[ ${KEYMAP} == viins ]]
+       [[ ${KEYMAP} = '' ]]
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+
+# Function to source files if they exist
+function zsh_add_file() {
+    local file="$ZDOTDIR/$1"
+    if [[ -f "$file" ]]; then
+        source "$file"
+    fi
+}
+
+# Function to clone and load a Zsh plugin
+function zsh_add_plugin() {
+    local repo="$1"
+    local plugin_name=$(basename "$repo")
+    local plugin_dir="$ZDOTDIR/plugins/$plugin_name"
+
+    if [[ -d "$plugin_dir" ]]; then
+        zsh_add_file "plugins/$plugin_name/$plugin_name.plugin.zsh"
+        zsh_add_file "plugins/$plugin_name/$plugin_name.zsh"
+    else
+        git clone "https://github.com/$repo.git" "$plugin_dir" && \
+        zsh_add_plugin "$repo" # Try to load after successful cloning
+    fi
+}
+
+

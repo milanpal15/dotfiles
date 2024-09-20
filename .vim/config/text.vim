@@ -9,7 +9,7 @@ set ul=1000
 set udf
 
 "undodir list of directories for undo files
-set udir=.
+set udir=~/undoHist
 
 "undorelod maximum number lines to save for undo on a buffer reload
 set ur=1000
