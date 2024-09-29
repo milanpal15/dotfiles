@@ -1,0 +1,117 @@
+#import = []
+
+[env]
+ALACRITTY_CONFIG="$HOME/.config/alacritty/"
+
+[colors.bright]
+black = "#4C566A"
+blue = "#5e81ac"
+cyan = "#88c0d0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#bf616a"
+white = "#abb2bf"
+yellow = "#D7BA7D"
+
+[colors.cursor]
+cursor = "#ECEFF4"
+text = "#3B4252"
+
+[colors.normal]
+black = "#4C566A"
+blue = "#5e81ac"
+cyan = "#88c0d0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#bf616a"
+white = "#abb2bf"
+yellow = "#D7BA7D"
+
+[colors.primary]
+#background = "#1f2227"
+background = "#09060e"
+foreground = "#abb2bf"
+
+[font]
+#normal = {family="",style=""}
+#bold = 
+#italic = 
+#bold_italic =
+#ligatures = true
+size = 13.0
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[window]
+padding = { x = 2, y = 0 }
+dynamic_title = true
+decorations = "Full"
+opacity = 0.8
+#class = { instance = "<string>", general = "<string>" }
+#Default: { instance = "Alacritty", general = "Alacritty" }
+#decorations_theme_variant = "Dark" | "Light" | "None"
+decorations_theme_variant = "Dark" 
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+#semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+save_to_clipboard = true
+
+#[shell]
+#program = "/bin/zsh"
+#args= ["-1"]
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+blink_interval = 750
+blink_timeout = 5
+
+[mouse]
+hide_when_typing = true

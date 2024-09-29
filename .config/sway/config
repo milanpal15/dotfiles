@@ -9,6 +9,73 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
+xwayland enable
+workspace_auto_back_and_forth yes
+show_marks yes
+output * bg $HOME/dotfiles/blackcat.png fill 
+
+input "type:keyboard" {
+    repeat_delay 210
+    repeat_rate 40
+    xkb_options caps:escape
+}
+#
+# Moving around:
+#
+
+#    # Focus next cycle.
+#    bindsym $mod+j nop i3ipc_focus next
+#
+#    # Move next.
+#    # bindsym $mod+shift+j nop i3ipc_move next
+#
+#    # Focus previous cycle.
+#    bindsym $mod+k nop i3ipc_focus prev
+#
+#    # Move previous.
+#    # bindsym $mod+shift+k nop i3ipc_move prev
+#
+#    # Focus previous window toggle.
+#    bindsym $mod+i nop i3ipc_focus toggle
+#
+#    # Focus the other container.
+#    bindsym $mod+o nop i3ipc_focus other
+#
+#    # Move to the other container.
+#    bindsym $mod+shift+o nop i3ipc_move other
+#
+#    # Swap window with the other container.
+#    bindsym $mod+Shift+Return nop i3ipc_move swap
+#
+#    # Toggle tabbed mode.
+#    bindsym $mod+Shift+t nop i3ipc_tabbed_toggle
+#
+#    # Toggle fullscreen mode.
+#    bindsym $mod+Shift+f fullscreen toggle
+#
+#    # Toggle monocle mode.
+#    bindsym $mod+f nop i3ipc_monocle_toggle
+#
+#    # Toggle workspace.
+#    bindsym $mod+Tab workspace back_and_forth
+#
+#    # Move your focus around
+#    bindsym $mod+$left focus left
+#    # bindsym $mod+$down focus down
+#    # bindsym $mod+$up focus up
+#    bindsym $mod+$right focus right
+
+
+#input "type:touchpad" {
+#     dwt enabled
+#     middle_emulation disabled
+#     click_method clickfinger
+#     tap enabled
+#     tap_button_map lrm
+# }
+
+
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -16,9 +83,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term kitty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
+set $term kitty # Your preferred application launcher # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # Recommends: rofi-wayland
 set $rofi_cmd rofi \

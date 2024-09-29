@@ -51,13 +51,13 @@ bindkey '^[[B' history-substring-search-down # or '\eOB'
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 autoload -Uz vcs_info
- precmd_vcs_info() { vcs_info }
- precmd_functions+=( precmd_vcs_info )
- setopt prompt_subst
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
 #zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '%b $ '
 
+precmd() { print "" }
 PROMPT="%B%{$fg[white]%}%1~%{$reset_color%}%  %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 
 PROMPT+='${vcs_info_msg_0_}'
-
