@@ -1,108 +1,38 @@
 require("user.launch")
 require("user.keymaps")
 require("user.options")
---spec ("user.colorscheme")
+require("user.autocmds")
+spec ("user.colorscheme")
 spec ("user.devicons")
 spec ("user.treesitter")
-spec ("user.textobjects") 
-spec ("user.lspserver")
 spec ("user.mason")
-spec ("user.masonlspconfig")
+spec ("user.schemastore")
+spec ("user.lspconfig")
+spec ("user.cmp")
+spec ("user.telescope")
+spec ("user.none-ls")
+spec ("user.whichkey")
+-- spec ("user.gitsigns")
+spec ("user.nvimtree")
+spec ("user.comment")
+spec ("user.lualine")
+-- spec ("user.navic")
+-- spec ("user.breadcrumbs")
+spec ("user.harpoon")
+spec ("user.autopairs")
+spec ("user.neogit")
+spec ("user.alpha")
+spec ("user.project")
+-- spec ("user.indentline")
+spec ("user.toggleterm")
+-- spec ("user.textobjects")
+-- spec ("user.masonlspconfig")
+spec ("user.extras.tabnine")
+spec ("user.extras.oil")
+spec ("user.extras.lab")
+spec ("user.extras.colorizer")
+spec ("user.extras.dressing")
+spec ("user.extras.fidget")
+spec ("user.extras.bqf")
 require("user.lazy")
--- specAfter changing plugin config it is recommended to run :PackerCompile
--- O.plugin.hop.active = true
--- O.plugin.matchup.active = true
--- O.plugin.colorizer.active = true
--- O.plugin.numb.active = true
--- O.plugin.ts_playground.active = true
--- O.plugin.indent_line.active = false
--- O.plugin.gitlinker.active = true
--- O.plugin.debug.active = true
--- O.plugin.bqf.active = true
--- O.plugin.ranger.active = true
--- O.plugin.spectre.active = true
--- O.plugin.dap_install.active = true
--- O.plugin.telescope_project.active = true
--- O.plugin.trouble.active = true
--- O.plugin.telescope_fzy.active = true
--- O.plugin.lsp_rooter.active = true
--- O.plugin.lazygit.active = true
--- O.plugin.zen.active = true
--- O.plugin.markdown_preview.active = true
--- dashboard
--- O.dashboard.custom_header = {""}
--- O.dashboard.footer = {""}
-
--- if you don't want all the parsers change this to a table of the ones you want
--- O.treesitter.ensure_installed = "all"
--- O.treesitter.ignore_install = {"haskell"}
--- O.treesitter.highlight.enabled = true
--- 
--- O.lang.clang.diagnostics.virtual_text = false
--- O.lang.clang.diagnostics.signs = false
--- O.lang.clang.diagnostics.underline = false
-
--- python
--- add things like O.python.formatter.yapf.exec_path
--- add things like O.python.linter.flake8.exec_path
--- add things like O.python.formatter.isort.exec_path
--- O.lang.python.formatter = 'yapf'
--- -- O.python.linter = 'flake8'
--- O.lang.python.isort = true
--- O.lang.python.autoformat = true
--- O.lang.python.diagnostics.virtual_text = true
--- O.lang.python.diagnostics.signs = true
--- O.lang.python.diagnostics.underline = true
--- O.lang.python.analysis.type_checking = "off"
--- O.lang.python.analysis.auto_search_paths = true
--- O.lang.python.analysis.use_library_code_types = true
-
-
--- lua
--- TODO look into stylua
--- O.lang.lua.formatter = 'lua-format'
--- -- O.lua.formatter = 'lua-format'
--- O.lang.lua.autoformat = false
-
--- javascript
--- O.lang.tsserver.formatter = 'prettier'
--- O.lang.tsserver.linter = nil
--- O.lang.tsserver.autoformat = true
-
--- json
--- O.lang.json.autoformat = true
-
--- ruby
--- O.lang.ruby.autoformat = true
-
--- go
--- O.lang.go.autoformat = true
-
--- rust
--- O.lang.rust.autoformat = true
--- create custom autocommand field (This would be easy with lua)
-
--- Turn off relative_numbers
--- O.relative_number = false
-
--- Turn off cursorline
--- O.cursorline = false
-
--- Neovim turns the default cursor to 'Block'
--- when switched back into terminal.
--- This below line fixes that. Uncomment if needed.
-
--- vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:ver90') -- Beam
--- vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:hor20') -- Underline
-
--- NOTE: Above code doesn't take a value from the terminal's cursor and
---       replace it. It hardcodes the cursor shape.
---       And I think `ver` means vertical and `hor` means horizontal.
---       The numbers didn't make a difference in alacritty. Please change
---       the number to something that suits your needs if it looks weird.
-
--- TODO
--- custom autocommands
--- user defined plugin config
--- custom settings
 

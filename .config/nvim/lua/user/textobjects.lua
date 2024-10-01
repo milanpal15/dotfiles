@@ -3,7 +3,7 @@ local M = {
 }
 
 function M.config()
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup{
    textobjects = {
     select = {
       enable = true,
