@@ -16,6 +16,11 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+#if ! [[ "$XDG_CONFIG_HOME"  ]]; then
+#    XDG_CONFIG_HOME="$HOME/.config/"
+#fi
+#export XDG_CONFIG_HOME
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 

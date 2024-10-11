@@ -10,3 +10,5 @@ alias nv="nvim "
 alias find="fd"
 alias gp="git push "
 alias s="sudo "
+alias nvim-lazy='XDG_CONFIG_HOME=~/.config/nvim-lazyvim nvim'
+alias nvim-nvchad='XDG_CONFIG_HOME=~/.config/nvim-nvchad nvim'
