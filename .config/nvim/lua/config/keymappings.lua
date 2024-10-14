@@ -1,9 +1,12 @@
 local wk= require("which-key")
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
-
+local vimmap = vim.keymap.set
 -- Keymap without Which-Key
 -- vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { noremap = true, silent = true })
+-- Indenting
+vimmap("v", "<", "<gv", { silent = true, noremap = true })
+vimmap("v", ">", ">gv", { silent = true, noremap = true })
 
 wk.add(
   {
