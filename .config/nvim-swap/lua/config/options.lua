@@ -27,7 +27,7 @@ vim.g.lazygit_config = true
 
 -- Options for the LazyVim statuscolumn
 vim.g.lazyvim_statuscolumn = {
-  folds_open = true, -- show fold sign when fold is open
+  folds_open = false, -- show fold sign when fold is open
   folds_githl = false, -- highlight fold sign with git sign color
 }
 
@@ -51,9 +51,6 @@ vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 vim.g.trouble_lualine = true
 
 local opt = vim.opt
-
--- exlore options
-vim.g.netrw_winsize = 25
 
 -- Tab / Indentation 
 opt.tabstop = 2 -- Number of spaces tabs count for
@@ -83,7 +80,7 @@ opt.cursorline = true -- Enable highlighting of the current line
 opt.completeopt = "menu,menuone,noselect,noinsert"
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
-opt.showmode = true-- Dont show mode since we have a statusline
+opt.showmode = true -- Dont show mode since we have a statusline
 opt.sidescrolloff = 8 -- Columns of context
 opt.scrolloff = 4 -- Lines of context
 

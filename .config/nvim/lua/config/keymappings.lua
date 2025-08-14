@@ -1,63 +1,40 @@
-local wk= require("which-key")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local keymapset = vim.keymap.set
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-local vimmap = vim.keymap.set
--- Keymap without Which-Key
--- vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { noremap = true, silent = true })
--- Indenting
-vimmap("v", "<", "<gv", { silent = true, noremap = true })
-vimmap("v", ">", ">gv", { silent = true, noremap = true })
 
-wk.add(
-  {
-    -- file editing
-    {
-      name = "file",
-      { "JJ", "<Esc>", desc="Escape", mode={"i","v"} },
-      { "<leader>ww", "<cmd>w<cr>", desc="Save file" },
-      { "<leader>wq", "<cmd>wq<cr>", desc="Save and quit file" },
-      { "<leader>qq", "<cmd>q!<cr>", desc="Quit file(force)" },
-    },
+--file mappings
+keymapset('i', 'JJ', '<Esc>')
+keymapset('n', '<leader>ww', ':w<CR>', opts)
+keymapset('n', '<leader>wq', ':wq<CR>', opts)
+keymapset('n', '<leader>sq', ':q<CR>', opts)
+keymapset('n', '<leader>qq', ':q!<CR>', opts)
 
-    -- buffer navigation
-    {  
-      name = "buffer",
-      mode = { "n" }, 
-      { "<leader>bn", "<cmd>bNext<cr>", desc="Next buffer" },
-      { "<leader>bd", "<cmd>bdelete<cr>", desc="Delete buffer" },
-    },
+--buffer mappings
+keymapset('n', '<leader>bn', ':bNext<CR>',opts)
+keymapset('n', '<leader>bp', ':bPrev<CR>',opts)
+keymapset('n', '<leader>bf', ':b<CR>', opts)
+keymapset('n', '<leader>bl', ':bl<CR>', opts)
+keymapset('n', '<leader>bd', ':bd<CR>', opts)
 
-    -- nvim tree
-    {
-      name = "explore",
-      mode = {"n","v","i"},
-      { "<leader>ee", "<cmd>NvimTreeToggle<cr>", desc="Toggle nvim tree" },
-      { "<leader>ef", "<cmd>NvimTreeFocus<cr>", desc="Change focus to nvim tree" },
-      { "<leader>eq", "<cmd>NvimTreeClose<cr>", desc="Close nvim tree" },
-    },
+--explore mappings
+--keymapset('n','<leader>ee', ':Explore<CR>', opts)
+keymapset('n', '<leader>h', '<C-w>h', { noremap = true, silent = true })
+keymapset('n', '<leader>l', '<C-w>l', { noremap = true, silent = true })
+--keymapset('n', '<leader>ee', ':Lexplore<CR>', { noremap = true, silent = true })
+keymapset('n', '<leader>e', function()
+  local current_buf = vim.api.nvim_get_current_buf()
+  local buf_name = vim.api.nvim_buf_get_name(current_buf)
+  if buf_name:match('^netrw') or vim.bo.filetype == 'netrw' then
+    vim.cmd('close')
+  else
+    vim.cmd('Lexplore')
+  end
+end, { noremap = true, silent = true })
 
-    -- window management
-    { 
-      name = "window",
-      mode = { "n" },
-      { "<leader>sv", "<cmd>vsplit<cr>", desc="Split vertically" },
-      { "<leader>sh", "<cmd>split<cr>", desc="Split horizontally" },
-    },
+-- settigns reload
+keymapset('n','<leader>sow',':source ~/.config/nvim/init.lua<CR>',opts)
+keymapset('n', '<leader>sof', ':luafile %<CR>', opts) -- reloads the current Lua file
 
-    -- telescope management
-    {
-      name = "telescope",
-      { "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", desc = "Find Files" },
-      { "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", desc = "Live grep" },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Show buffers" },
-      { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
-    },
-
-    -- Comment line
-    {
-      name = "comment",
-      { "<C-/>","gcc", desc="Toggle comment" }
-    }
-  }
-)
-
+keymapset('i','<leader>"', ':<CR>', opts)
