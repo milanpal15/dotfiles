@@ -1,11 +1,16 @@
+# Set PATH for Homebrew and other tools
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH" 
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-
 [ -f "$HOME/.bash_aliases" ] && source "$HOME/.bash_aliases" 
 # Lines configured by zsh-newuser-install
-HISTFILE=$HOME/.bash_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=8000
 bindkey -v
@@ -50,6 +55,8 @@ bindkey '^[[A' history-substring-search-up # or '\eOA'
 bindkey '^[[B' history-substring-search-down # or '\eOB'
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+bindkey '^I' menu-complete   
+
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -61,3 +68,4 @@ precmd() { print "" }
 PROMPT="%B%{$fg[white]%}%1~%{$reset_color%}%  %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 
 PROMPT+='${vcs_info_msg_0_}'
+
