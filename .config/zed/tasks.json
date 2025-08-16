@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Save current file",
+    "command": "zed",
+    "args": ["--write", "$ZED_FILE"],
+    "reveal": "never",
+    "hide": "on_success",
+    "tags": ["save-file"]
+  },
+  {
+    "label": "Save and close current file",
+    "command": "zed",
+    "args": ["--write", "$ZED_FILE", "&&", "zed", "--close", "$ZED_FILE"],
+    "reveal": "never",
+    "hide": "on_success",
+    "tags": ["save-close"]
+  },
+  {
+    "label": "Save all files",
+    "command": "zed",
+    "args": ["--write-all"],
+    "reveal": "never",
+    "hide": "on_success",
+    "tags": ["save-all"]
+  }
+]
+

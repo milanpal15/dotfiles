@@ -1,0 +1,164 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Key bindings when Vim emulation is active and no menu is open.
+      // Works across normal and visual modes.
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // Key bindings active in normal mode when no dropdown or context menu is open.
+    }
+  },
+  // {
+  //   "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+  //   "bindings": {
+  //     "x": ["workspace::SendKeystrokes", "a backspace escape l"],
+  //     "d d": "editor::DeleteLine",
+  //     "s": ["workspace::SendKeystrokes", "a backspace"],
+  //     "c i w": ["workspace::SendKeystrokes", "v i w delete i"]
+  //   }
+  // },
+  // {
+  //   "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+  //   "bindings": {
+  //     "x": "vim::VisualDelete",
+  //     "d": "editor::Delete",
+  //     "s": "editor::Delete"
+  //   }
+  // },
+  {
+    "context": "vim_mode == insert || vim_mode == normal || vim_mode == visual || vim_mode == replace || vim_mode == command",
+    "bindings": {
+      // Key bindings for insert mode (e.g. typing text).
+      "J J": "vim::NormalBefore"
+    }
+  },
+  // {
+  //   "context": "vim_mode == visual",
+  //   "bindings": {
+  //     "J J": "vim::NormalBefore"
+  //   }
+  // },
+  {
+    "context": "vim_mode == normal || vim_mode == insert || vim_mode == visual",
+    "bindings": {
+      "ctrl-/": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      // Key bindings active in visual mode for manipulating selections.
+    }
+  },
+  {
+    "context": "vim_mode == replace",
+    "bindings": {
+      // Replace mode bindings (rarely used, but you can add custom behavior here).
+    }
+  },
+  {
+    "context": "vim_mode == command",
+    "bindings": {
+      // Bindings while entering ex-style commands (e.g., `:w`, `:q`).
+    }
+  },
+  {
+    "context": "vim_mode && editor",
+    "bindings": {
+      // Bindings that work in ANY vim mode, but only while editing a file.
+      // Great for editor-specific commands that shouldn't fire in menus or terminals.
+    }
+  },
+  {
+    "context": "!vim_mode && editor",
+    "bindings": {
+      // Bindings that apply while editing a file, but *not* in vim mode.
+      // Useful for default/non-vim keybindings.
+    }
+  },
+  {
+    "context": "editor && !menu",
+    "bindings": {
+      // Applies in any mode, as long as you're editing a file and no menu is open.
+      // Use this for things like file-level commands or utility shortcuts.
+    }
+  },
+  {
+    "context": "!editor && !menu",
+    "bindings": {
+      // Applies when *not* editing a file and no menu is open.
+      // Good for global UI shortcuts, launcher commands, or navigation.
+    }
+  },
+  {
+    "context": "editor",
+    "bindings": {
+      // Applies when editing a file, regardless of mode or menu state.
+      // Catch-all for file-related actions.
+    }
+  },
+  {
+    "context": "!editor",
+    "bindings": {
+      // Applies when no editor is focused, like on dashboards or terminals.
+    }
+  },
+  {
+    "context": "VimControl && editor && !menu",
+    "bindings": {
+      // Fully focused editing with Vim enabled and no UI interference.
+      // Great place for most productive keybindings.
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Applies when no file is open or you're in a collaborative view.
+      // Use this for general actions like opening files or switching projects.
+    }
+  },
+  {
+    "context": "!vim_mode && !menu",
+    "bindings": {
+      // Applies outside of Vim mode, with no menu open.
+      // Useful if you want a consistent set of shortcuts for users not using Vim.
+    }
+  },
+  {
+    "context": "vim_mode == normal && menu",
+    "bindings": {
+      // Active in normal mode while a dropdown is open.
+      // Add behavior for fuzzy finders, command menus, etc.
+    }
+  },
+  {
+    "context": "vim_mode == insert && menu",
+    "bindings": {
+      // Active in insert mode with an open menu (like autocomplete).
+    }
+  },
+  {
+    "context": "vim_mode == visual && menu",
+    "bindings": {
+      // Active in visual mode with a UI menu open.
+    }
+  },
+  {
+    "context": "SharedScreen && menu",
+    "bindings": {
+      // For shared editing sessions while interacting with menus.
+    }
+  }
+]
