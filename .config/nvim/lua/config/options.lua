@@ -172,4 +172,4 @@ if vim.g.neovide then
   vim.g.neovide_background_color = "#0f1117" .. alpha()
 end
 
-vim.cmd('colorscheme retrobox')
+vim.cmd('colorscheme slate')
