@@ -69,3 +69,10 @@ PROMPT="%B%{$fg[white]%}%1~%{$reset_color%}%  %(?:%{$fg_bold[green]%}➜ :%{$fg_
 
 PROMPT+='${vcs_info_msg_0_}'
 
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+

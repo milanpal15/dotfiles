@@ -160,5 +160,40 @@
     "bindings": {
       // For shared editing sessions while interacting with menus.
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k h": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-t": [
+        "pane::CloseOtherItems",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
   }
 ]

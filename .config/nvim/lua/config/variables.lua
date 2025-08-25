@@ -24,6 +24,7 @@ m.colorschemes = {
     'zellner',
     'wildcharm',
     'zaibatsu',
-}
+    'nord',
+  }
 
 return m

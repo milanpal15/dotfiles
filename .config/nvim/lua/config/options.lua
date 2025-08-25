@@ -1,13 +1,5 @@
--- This file is automatically loaded by plugins.core
--- LazyVim auto format
 vim.g.autoformat = true
-
--- LazyVim picker to use.
--- Can be one of: telescope, fzf
--- Leave it to "auto" to automatically use the picker
--- enabled with `:LazyExtras`
 vim.g.lazyvim_picker = "auto"
-
 -- LazyVim root dir detection
 -- Each entry can be:
 -- * the name of a detector function like `lsp` or `cwd`
@@ -23,6 +15,7 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 -- Set the options you want to override in `~/.config/lazygit/custom.yml`
 -- WARN: on Windows you might want to set `editPreset: "nvim"` due to
 -- this issue https://github.com/jesseduffield/lazygit/issues/3467
+vim.g.have_nerd_font = true
 vim.g.lazygit_config = true
 
 -- Options for the LazyVim statuscolumn
@@ -172,4 +165,5 @@ if vim.g.neovide then
   vim.g.neovide_background_color = "#0f1117" .. alpha()
 end
 
-vim.cmd('colorscheme slate')
+
+vim.cmd('colorscheme quiet')
