@@ -195,10 +195,5 @@
         }
       ]
     }
-  },
-  {
-    "bindings": {
-      "cmd-shift-f": "editor::FormatSelections"
-    }
   }
 ]
