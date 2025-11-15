@@ -1,6 +1,2 @@
-m = {}
-require("config.functions")
-require("config.keymappings")
-require("config.options")
-require("config.variables")
+-- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
