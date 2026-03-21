@@ -8,3 +8,4 @@ lazy-lock.json
 ..*.un~
 *.un~
 .ssh/**
+.zsh/plugins/

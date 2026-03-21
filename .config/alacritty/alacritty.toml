@@ -38,10 +38,10 @@ foreground = "#abb2bf"
 #italic = 
 #bold_italic =
 #ligatures = true
-size = 13.0
+size = 11.0
 
 [font.bold]
-family = "monospace"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.glyph_offset]
@@ -49,11 +49,11 @@ x = 0
 y = 0
 
 [font.italic]
-family = "monospace"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "monospace"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font.offset]

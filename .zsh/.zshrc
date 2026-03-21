@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export ZDOTDIR="$HOME/.zsh"
 [ -f "$HOME/.bash_aliases" ] && source "$HOME/.bash_aliases" 
 # Lines configured by zsh-newuser-install
 HISTFILE=$HOME/.zsh_history
@@ -76,3 +77,13 @@ export NVM_DIR="$HOME/.config/nvm"
 
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/myos/.opam/opam-init/init.zsh' ]] || source '/home/myos/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+export LANG=en_IN.UTF-8
