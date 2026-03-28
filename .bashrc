@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval $(opam env --switch=FSV)
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -65,8 +64,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-. "$HOME/.cargo/env"
-export PATH="$(ruby -e 'require "rubygems"; puts Gem.user_dir + "/bin"'):$PATH"
+# . "$HOME/.cargo/env"
+# export PATH="$(ruby -e 'require "rubygems"; puts Gem.user_dir + "/bin"'):$PATH"
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
@@ -103,8 +102,7 @@ fi
 
 # Optional: a small helper to show a subtle suggestion using history top match
 # Press Ctrl-R to get fuzzy history via fzf; this is very helpful as "autosuggest"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 export LANG=en_IN.UTF-8
 
-# opencode
-export PATH=/home/myos/.opencode/bin:$PATH
+export ZDOTDIR="$HOME/.zsh"
