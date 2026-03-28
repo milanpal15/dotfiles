@@ -1,7 +1,5 @@
-#import = []
-
 [env]
-ALACRITTY_CONFIG="$HOME/.config/alacritty/"
+ZDOTDIR = "/home/mylinux/.zsh"
 
 [colors.bright]
 black = "#4C566A"
@@ -37,8 +35,7 @@ foreground = "#abb2bf"
 #bold = 
 #italic = 
 #bold_italic =
-#ligatures = true
-size = 11.0
+size = 10.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -89,11 +86,12 @@ mods = "Control"
 padding = { x = 2, y = 0 }
 dynamic_title = true
 decorations = "Full"
-opacity = 0.8
+opacity = 0.6
 #class = { instance = "<string>", general = "<string>" }
 #Default: { instance = "Alacritty", general = "Alacritty" }
 #decorations_theme_variant = "Dark" | "Light" | "None"
 decorations_theme_variant = "Dark" 
+blur = true
 
 [scrolling]
 history = 10000
@@ -103,8 +101,11 @@ multiplier = 3
 #semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 save_to_clipboard = true
 
-#[shell]
-#program = "/bin/zsh"
+[terminal.shell]
+program = "/home/linuxbrew/.linuxbrew/bin/zsh"
+
+[general]
+import = ["$HOME/.bashrc"]
 #args= ["-1"]
 
 [cursor]
@@ -115,3 +116,4 @@ blink_timeout = 5
 
 [mouse]
 hide_when_typing = true
+
