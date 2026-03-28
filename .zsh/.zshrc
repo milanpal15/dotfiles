@@ -86,3 +86,4 @@ test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2
 [[ ! -r '/home/myos/.opam/opam-init/init.zsh' ]] || source '/home/myos/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 export LANG=en_IN.UTF-8
+
