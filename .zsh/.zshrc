@@ -33,6 +33,15 @@ setopt histignoredups
 setopt autocd
 
 source $ZDOTDIR/config/functions
+source $ZDOTDIR/config/
+sourceFiles=(
+    $ZDOTDIR/config/zoxide.zsh
+    $ZDOTDIR/config/atuin.zsh
+    $ZDOTDIR/config/fzf.zsh
+)
+for file in "${sourceFiles[@]}"; do
+    source "$file"
+done
 
 repos=(
     #marlonrichert/zsh-hist
