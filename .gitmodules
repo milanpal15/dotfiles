@@ -1,0 +1,4 @@
+[submodule "nvim-stow/.config/nvim"]
+	path = nvim-stow/.config/nvim
+	url = https://github.com/milanpal15/kickstart.nvim.git
+	branch = myconfig
